@@ -5,16 +5,14 @@
 	<title>jQueryプラグイン</title>
 </head>
 <body>
-	<p><img src="image1.jpg"></p>
+	<p><img src="image1.jpg" data-size="50"></p>
 	<p><img src="image2.jpg"></p>
-	<p><img src="image3.jpg"></p>
+	<p><img src="image3.jpg" data-size="30"></p>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="jquery.showsize.js"></script>
 	<script>
 		$(function() {
-			$('img').showsize({
-				size: 20,
-			});
+			$('img').showsize();
 		});
 	</script>
 </body>
