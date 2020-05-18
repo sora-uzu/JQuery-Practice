@@ -6,18 +6,13 @@
 </head>
 <body>
 	<p><img src="image1.jpg"></p>
+	<p><img src="image2.jpg"></p>
+	<p><img src="image3.jpg"></p>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="jquery.showsize.js"></script>
 	<script>
 		$(function() {
-			$("img").click(function() {
-				var msg = $(this).width() + ' x ' + $(this).height();
-				$(this).wrap('<div style="position:relative;"></div>');
-				var div = $('<div>')
-							.text(msg)
-							.css('position', 'absolute')
-							.css('top', '0');
-			    $(this).after(div);
-			});
+			$('img').showsize();
 		});
 	</script>
 </body>
