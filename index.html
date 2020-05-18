@@ -2,29 +2,22 @@
 <html lang="ja">
 <head>
 	<meta charaset="utf-8">
-	<title>jQueryの練習</title>
+	<title>jQueryプラグイン</title>
 </head>
 <body>
-	<p>jQueryの練習</p>
-	<ul id="main">
-		<li>0</li>
-		<li class="item">1</li>
-		<li class="item">2</li>
-		<li>
-			3
-		    <ul id="sub">
-		    	<li>3-0</li>
-		    	<li>3-1</li>
-		    	<li class="item">3-2</li>
-		    	<li class="item">3-3</li>
-		    	<li>3-4</li>
-		    	<li>3-5</li>
-		    </ul>
-		</li>
+	<p><img src="image1.jpg"></p>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script>
 		$(function() {
-			$("#sub").parent().css('color', 'red');
+			$("img").click(function() {
+				var msg = $(this).width() + ' x ' + $(this).height();
+				$(this).wrap('<div style="position:relative;"></div>');
+				var div = $('<div>')
+							.text(msg)
+							.css('position', 'absolute')
+							.css('top', '0');
+			    $(this).after(div);
+			});
 		});
 	</script>
 </body>
